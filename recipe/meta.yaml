@@ -1,5 +1,5 @@
 {% set name = "tcolorpy" %}
-{% set version = "0.0.9" %}
+{% set version = "0.1.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 642d4105c59e6fac6c1a2e04962a8a4c363cb7070f956969c4af5e2a780b5ef3
+  sha256: c73f5344bead6f2e796e5fdbe44e4c730b2de6035ee4a199f109470b334257c7
 
 build:
   number: 0
