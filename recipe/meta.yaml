@@ -20,6 +20,9 @@ requirements:
     - pip
     - python >=3.5
     - releasecmd
+    - setuptools  >=64
+    - setuptools_scm >=7,<8 # [py<38]
+    - setuptools_scm >=8 # [py>=38]
   run:
     - python >=3.5
 
@@ -28,6 +31,8 @@ test:
     - tcolorpy
   commands:
     - pip check
+    # make sure the version reported by pip is correct
+    - "pip show {{ name }} | grep -Fx 'Version: {{ version }}'"
   requires:
     - pip
 
