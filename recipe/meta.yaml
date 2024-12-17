@@ -18,12 +18,12 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python {{ python_min }}
     - releasecmd
     - setuptools >=64
     - setuptools_scm >=7
   run:
-    - python >=3.5
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -34,6 +34,7 @@ test:
     - "pip show {{ name }} | grep -Fx 'Version: {{ version }}'"
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/thombashi/tcolorpy
